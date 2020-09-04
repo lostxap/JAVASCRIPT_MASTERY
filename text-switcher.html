@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        h1{display: none;}
+    </style>
+    <h1>reviews</h1>
+    <div class="txt">
+        <h1 id="one">Lorem.</h1>
+        <h1 id="two">Lorem, ipsum dolor.</h1>
+        <h1 id="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio modi eos, eius recusandae sit tenetur excepturi tempore eveniet a beatae!</h1>
+    </div>
+
+    <div class="txtsee">Lorem.</div>
+    <button onclick="add()">next</button>
+    <button onclick="min()">pre</button>
+
+    <script>
+        let i = 0 
+        var x = document.querySelector('#one').innerHTML
+        var y = document.querySelector('#two').innerHTML
+        var z = document.querySelector('#three').innerHTML
+
+        arr = [x,y,z];
+        
+        function add(){
+            i=i+1
+
+            if(i>2){
+                i=0
+            }
+            document.querySelector('.txtsee').innerHTML = arr[i]
+        }
+        
+
+        function min(){
+            i=i-1
+
+            if(i<0){
+
+                i=2
+            }
+            document.querySelector('.txtsee').innerHTML = arr[i]
+        }
+        
+    
+
+        
+
+    </script>
+</body>
+</html>

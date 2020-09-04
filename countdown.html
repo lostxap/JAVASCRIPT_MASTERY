@@ -1,0 +1,26 @@
+<html>
+  <body>
+
+    
+    Its all over in <span id="timey">08 : 00<span> minutes!
+
+    
+    <script>
+        window.onload = function() {
+        var min = 7;
+        var sec = 59;
+        setInterval(function() {
+            document.getElementById("timey").innerHTML = min + " : " + sec;
+            sec--;
+            if (sec == 00) {
+            min --;
+            sec = 60;
+            if (min == 0) {
+                min = 5;
+            }
+            }
+        }, 1000);
+        }
+    </script>
+  </body>
+</html>

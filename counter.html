@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        .all{
+            position: relative;
+            text-align: center;
+        
+        }
+
+        h1{
+            text-align: center;
+        }
+
+
+        .allbtns{
+            display: flex;
+            width: 20%;
+            position: relative;
+            justify-content: center;
+            left: 50%;
+            transform: translate(-50%);
+            padding: 20px;
+        }
+
+        button{
+            margin: 20px;
+            padding: 16px;
+            border-radius: 100px;
+            border: 2px solid royalblue ;
+            background-color: royalblue;
+            color: white;
+            width: 100px;
+        }
+
+
+    </style>
+    
+
+<div class="all"></div>
+    <h1 id="num">0</h1>
+<div class="allbtns">
+    <button class="one" onclick="increase()">increase</button>
+    <button class="two" onclick="decrease()">decrease</button>
+    <button class="three" onclick="reset()">reset(0)</button>
+</div>
+</div>
+
+    <script>
+        let score = 0;
+
+        function increase(){
+
+            score=score+1;
+            document.getElementById('num').innerHTML = score;
+        
+        }
+
+        function decrease(){
+
+            score=score-1;
+            document.getElementById('num').innerHTML = score;
+
+        }
+        
+        function reset(){
+
+            score=0;
+            document.getElementById('num').innerHTML = score;
+
+        }
+
+        
+        
+        
+
+    </script>
+</body>
+</html>
